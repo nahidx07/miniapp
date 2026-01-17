@@ -1,16 +1,23 @@
-:root { --bg: #0b0d10; --card: #161b22; --primary: #e02424; --text: #ffffff; --gold: #f1c40f; }
-body { background-color: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
-.header { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: var(--card); border-bottom: 1px solid #333; }
-.container { padding: 12px; }
-.video-container { width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; position: relative; border: 1px solid #333; }
-video, #iframe-container, #iframe-container iframe { width: 100% !important; height: 100% !important; border: none; outline: none; }
-.stats { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 14px; color: #aaa; }
-.live-dot { height: 8px; width: 8px; background: red; border-radius: 50%; animation: blink 1s infinite; }
-@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-.chat-box { background: var(--card); border-radius: 12px; height: 350px; display: flex; flex-direction: column; margin-top: 15px; border: 1px solid #222; }
-#messages { flex: 1; overflow-y: auto; padding: 15px; display: flex; flex-direction: column-reverse; }
-.msg { margin-bottom: 10px; font-size: 14px; background: #0b0d10; padding: 8px 12px; border-radius: 8px; width: fit-content; max-width: 90%; }
-.msg span { color: var(--primary); font-weight: bold; margin-right: 5px; }
-.input-area { display: flex; padding: 10px; background: #1c2128; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
-input { flex: 1; background: transparent; border: none; color: white; padding: 10px; outline: none; font-size: 14px; }
-.send-btn { background: var(--primary); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+{
+  "name": "toto-stream",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "firebase": "^10.0.0",
+    "shaka-player": "^4.3.5",
+    "lucide-react": "latest",
+    "date-fns": "latest"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest"
+  }
+  }
