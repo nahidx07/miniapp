@@ -1,23 +1,24 @@
 {
   "name": "toto-stream",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "firebase": "^10.0.0",
-    "shaka-player": "^4.3.5",
-    "lucide-react": "latest",
-    "date-fns": "latest"
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "firebase": "^10.8.0",
+    "lucide-react": "^0.331.0",
+    "hls.js": "^1.5.7",
+    "date-fns": "^3.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest"
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
   }
 }
