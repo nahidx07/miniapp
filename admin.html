@@ -1,1 +1,44 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toto Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color:red">Admin Panel</h1>
+        
+        <div class="admin-card">
+            <h3>Update Live Match</h3>
+            <input type="text" id="mName" placeholder="Match Title (e.g. BAN vs IND)">
+            <input type="text" id="mUrl" placeholder="M3U8 Stream URL">
+            <button id="updateMatchBtn">Update Now</button>
+        </div>
+
+        <div class="admin-card">
+            <h3>Watching Counter</h3>
+            <input type="number" id="vCount" placeholder="Watching Count">
+            <button id="updateWatchingBtn">Set Viewers</button>
+        </div>
+    </div>
+
+    <script type="module">
+        import { db, doc, setDoc } from './firebase-config.js';
+
+        document.getElementById('updateMatchBtn').onclick = async () => {
+            const title = document.getElementById('mName').value;
+            const url = document.getElementById('mUrl').value;
+            await setDoc(doc(db, "settings", "liveMatch"), { title, url });
+            alert("Updated!");
+        };
+
+        document.getElementById('updateWatchingBtn').onclick = async () => {
+            const count = document.getElementById('vCount').value;
+            await setDoc(doc(db, "stats", "watching"), { count: parseInt(count) });
+            alert("Viewers Updated!");
+        };
+    </script>
+</body>
+</html>
