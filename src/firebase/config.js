@@ -2,12 +2,13 @@ import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyClqOFvnuDEO6lgQDLCfL5BxSLVu0lwqUA",
+  authDomain: "miniapp-07.firebaseapp.com",
+  projectId: "miniapp-07",
+  storageBucket: "miniapp-07.firebasestorage.app",
+  messagingSenderId: "1064097880770",
+  appId: "1:1064097880770:web:1be044c6271934e091b95b",
+  measurementId: "G-E7KMZ941ZC"
 };
 
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
